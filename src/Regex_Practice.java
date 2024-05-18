@@ -8,7 +8,7 @@ public class Regex_Practice {
 
      private String password;
 
-  void setStudent_info(String StudentEmail ,String Student_password){
+  void setStudent_info(String StudentEmail ,String Student_password, int Year){
        
     this.password = Student_password;
     
@@ -45,11 +45,60 @@ if (Email_valid && Pass_valid) {
                  for (Map.Entry<Integer,String>entry : Question_Paper.entrySet()) {
 
                     System.out.println(entry.getKey()+" "+entry.getValue()+"\n");
+
+
+                    switch (Year) {
+
+                      //database management
+                        case 2016:
+                        System.out.println(Question_Paper.get(0)+"downloading......");
+                       break;
+
+                       //imperative programming
+                    
+                       case 2017:
+                       System.out.println(entry.getValue()+"downloading......");
+                      break;
+
+                      //system analysis and design
+
+
+                      case 2018:
+                      System.out.println(entry.getValue()+"downloading......");
+                     break;
+
+                     //object oriented programming
+
+                     case 2019:
+                     System.out.println(entry.getValue()+"downloading......");
+                    break;
+                    case 2020:
+                    System.out.println(entry.getValue()+"downloading......");
+                   break;
+
+                   // networking
+
+                   case 2021:
+                   System.out.println(entry.getValue()+"downloading......");
+                  break;
+
+                  //artificial intelligence
+
+                  case 2022:
+                  System.out.println(entry.getValue()+"downloading......");
+                 break;
+
+                 //data structure and algorithm
+
+                        default:
+                            break;
+                    }
                     
                  }
 
-                 
+              
                     
+                 
                  
 
     
@@ -69,7 +118,7 @@ if (Email_valid && Pass_valid) {
 
 
 
-public static void main(String[] args) {
+public static void main(String[] args, int year) {
 
     //initializng String variables
        
@@ -93,10 +142,20 @@ public static void main(String[] args) {
     System.out.print("ENTRE YOUR PASSWORD_ ");
       getStudent_Pass = input.nextLine();
 
+      //
+      
+      System.out.println("ENTRE THE YEAR OF THE QUESTION PAPER YOU WANT TO DOWNLOAD_ ");
+
+        int year_ = input.nextInt();
+         
+
               //myMethod
-              get_set.setStudent_info(getStudent_Email,getStudent_Pass);
+              get_set.setStudent_info(getStudent_Email,getStudent_Pass,year_);
               get_set.getStudent_no(getStudent_Pass);
-                 
+
+
+
+          
          input.close();
 }
 
